@@ -253,7 +253,7 @@ export default function BookTable() {
               className="cancel-btn"
               onClick={handleCancelBooking}
             >
-              CANCEL BOOKING
+              Cancel Booking
             </button>
           </div>
         </form>
