@@ -1,0 +1,145 @@
+.menu-section {
+  padding: 60px 0;
+  width: 100%;
+  text-align: center;
+  background: #ffffff;
+}
+
+.menu-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* FILTERS */
+.menu-filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.filter-btn {
+  padding: 7px 15px;
+  border-radius: 20px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: #1f242d;
+  color: white;
+}
+
+/* FLEX CONTAINER */
+.menu-flex {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+}
+
+/* CARD */
+.menu-card {
+  width: 300px;
+  background: #1f242d;
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.menu-img {
+  position: relative;
+  background: white;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-img img {
+  width: 150px;
+}
+
+/* CARD CONTENT */
+.menu-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.menu-content p {
+  font-size: 14px;
+  color: #e2e2e2;
+  margin: 12px 0;
+  line-height: 20px;
+}
+
+/* BOTTOM ROW */
+.menu-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* CART BUTTON */
+.cart-btn {
+  background: #f7c02a;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-icon {
+  font-size: 18px;
+  color: white;
+}
+
+/* VIEW MORE */
+.view-more-btn {
+  margin-top: 40px;
+  background: #f7c02a;
+  padding: 12px 35px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.fav-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  color: red;
+  cursor: pointer;
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menu-flex {
+    width: 90%;
+  }
+
+  .menu-card {
+    width: 100%;
+  }
+}

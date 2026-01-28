@@ -1,0 +1,125 @@
+.reviews-page {
+  min-height: 100vh;
+  padding: 140px 20px;
+  background: #222831;
+  color: white;
+  text-align: center;
+  overflow-x: hidden; /* IMPORTANT */
+  margin-top: 0px;        /* header below space */
+  box-sizing: border-box; 
+}
+
+.reviews-title {
+  margin-bottom: 40px;
+  font-size: 34px;
+  font-family: "Dancing Script", cursive;
+}
+
+/* SLIDER WRAPPER */
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 100%;
+}
+
+/* ARROWS */
+.arrow-btn {
+  background: white;
+  border: none;
+  font-size: 26px;
+  padding: 8px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* REVIEW CONTAINER */
+.reviews-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  overflow: hidden; /*FIX */
+}
+
+/* CARD */
+.review-card {
+  background: white;
+  color: black;
+  padding: 22px;
+  border-radius: 14px;
+  width: 260px;
+  flex-shrink: 0; /*FIX */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* AVATAR PLACEHOLDER  */
+.review-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;     /* vertical center */
+  justify-content: center; /* horizontal center */
+  font-size: 26px;
+  font-weight: bold;
+  color: #555;
+  margin: 0 auto 15px;
+  object-fit: cover;
+}
+
+/* TEXT */
+.review-text {
+  font-style: italic;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.review-stars {
+  color: #f7c02a;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.review-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* ========================= */
+/* 📱 MOBILE FIX (iPhone SE) */
+/* ========================= */
+@media (max-width: 480px) {
+
+  .reviews-page{
+    margin-top: 0;
+    
+  }
+  .reviews-title {
+    font-size: 26px;
+  }
+
+  .slider-wrapper {
+    gap: 10px;
+  }
+
+  .reviews-container {
+    max-width: 260px; /*ONLY 1 CARD WIDTH */
+  }
+
+  .review-card {
+    width: 260px;
+  }
+  .arrow-btn {
+    font-size: 22px;
+    padding: 6px 10px;
+  }
+  /* on toggle click */
+
+  .header.open-nav ~ .reviews-page {
+     padding-top: 250px;  
+  }
+}

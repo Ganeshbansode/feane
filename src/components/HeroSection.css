@@ -1,0 +1,146 @@
+.hero {
+  width: 100%;
+  height: 100vh;                          /* Full screen */
+  background-size: cover;                 /* Fit screen */
+  background-position: center;
+  background-repeat: no-repeat;
+   
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+
+  padding: 140px;
+  color: white;
+
+  margin-top: 0px;        /* header below space */
+  box-sizing: border-box;  /* IMPORTANT - to prevent content wrap issues */
+}
+.offer-section {
+   background: #ffffff
+}
+
+.hero-content {
+  max-width: 450px;
+  transition: margin-top 0.3s ease;
+  
+}
+
+.hero h1 {
+  font-size: 48px;
+
+}
+.hero-btn{
+     background: #f7c02a;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 0px;
+    padding: 80px 20px;
+    align-items: start;
+    justify-content: left;
+    text-align: left;
+  }
+  /* for toggle use  */
+   .header.open-nav ~ .hero .hero-content {
+    margin-top: 200px;
+  }
+  .hero h1 {
+    font-size: 25px;
+  }
+}
+
+/* offer section css */
+
+.offer-section{
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin: 60px 0;
+
+}
+.offer-card{
+  background: #1f242d;
+  width: 40%;
+  padding: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.offer-img{
+  width: 180px;
+  height: 180px;
+  border-radius: 900px;
+  overflow: hidden;
+  border: 4px solid yellow;
+}
+.offer-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.offer-content h3{
+  font-size: 24px;
+   font-family: "Brush Script MT", cursive;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.offer-content h2{
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  margin: 0 0 15px 0;
+}
+.offer-content h2 span{
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.offer-btn{
+  background: #f7c02a;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 160px;
+}
+.cart-icon {
+  font-size: 18px;
+  color: white;
+
+}
+
+@media (max-width: 768px) {
+  .offer-section {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .offer-card {
+    width: 90%;
+    margin: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .offer-img {
+    width: 150px;
+    height: 150px;
+  }
+  
+}
+

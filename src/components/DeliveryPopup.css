@@ -1,0 +1,134 @@
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  width: 350px;
+  background: #fff;
+   border-radius: 18px; 
+  padding: 20px 22px 26px;
+  text-align: center;
+}
+
+ .popup-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+
+.popup-header h2 {
+  position: absolute;
+  top: 12px;                 /* vertical spacing */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;                 /* important */
+  font-size: 18px;
+  font-weight: 700;
+  color: #222831;
+  letter-spacing: 1px;
+}
+
+
+.popup-close {
+      position: absolute;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  right: 14px;
+  cursor: pointer;
+  color: #555;
+}
+
+.popup-input-row button,
+.start-btn {
+  width: 100%;               /* same width */
+  white-space: nowrap;      /* single line text */
+}
+
+/* TEXT */
+.popup-text {
+  font-size: 14px;
+  color: #444;
+  margin: 8px 0;
+} 
+
+/* INPUT ROW */
+.popup-input-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.popup-input-row input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #f7c02a;
+}
+
+.popup-input-row button {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  background: #f7c02a;
+  color: #121212;
+  font-weight: 600;
+  cursor: pointer;
+}
+.start-btn {
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  background: #f7c02a;
+  color: #121212;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 12px auto 0;
+  display: block;
+  letter-spacing: 0.5px;
+}
+
+/* massage */
+
+.popup-message {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/*  Not serviceable */
+.popup-message.error {
+  background: #fde2e2;
+  color: #b91c1c;
+  border: 1px solid #f5a5a5;
+}
+
+/*  Serviceable */
+.popup-message.success {
+  background: #e6f9ee;
+  color: #0f7a3e;
+  border: 1px solid #9ee2b8;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .popup-box {
+    width: 90%;
+  }
+
+  .popup-input-row {
+    flex-direction: column;
+  }
+}

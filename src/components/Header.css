@@ -1,0 +1,296 @@
+/* ================= HEADER ================= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #1f2430;
+  z-index: 10000;
+    pointer-events: auto;
+    overscroll-behavior: contain;
+}
+
+/* CENTERED WRAPPER */
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 24px;
+ 
+  display: flex;
+  align-items: center;
+}
+
+/* LEFT */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-icons {
+  margin-left: auto;  
+   margin-right: 0;   /* ⭐ MOST IMPORTANT */
+  display: flex;
+  gap: 20px;
+}
+
+.nav-icons .icon {
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-icons .icon:hover {
+  opacity: 0.7;
+}
+
+
+/* CENTER MENU */
+.header-center {
+  margin: 0 auto; /* ⭐ MAGIC */
+  display: flex;
+  gap: 30px;
+}
+
+.header-center button {
+  background: none;
+  border: none;
+  color: #d1d5db;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  
+}
+
+.header-center button:hover {
+  color: white;
+}
+
+/* RIGHT ICONS */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-left: auto;
+}
+
+.header-right .icon {
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  
+}
+
+/* LOGO */
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  font-family: "Brush Script MT", cursive;
+}
+
+/* FAV */
+.fav-count {
+  position: relative;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+.fav-count small {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* CART */
+.cart-wrapper {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.desktop-icons {
+  margin-left: auto;   /* ⭐ FULL RIGHT CORNER */
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* ======================
+   NAV USER (WELCOME + NAME)
+====================== */
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 140px;
+}
+
+.nav-user-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  white-space: normal;      /* ✅ allow wrap */
+}
+
+.nav-welcome {
+  font-size: 14px;
+  color: #6b7280;           /* soft gray like screenshot */
+}
+
+.nav-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  word-break: break-word;  /* ✅ wrap surname on mobile */
+}
+
+/* MOBILE */
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  margin-left: auto; 
+}
+
+/* ####################################### */
+
+@media (max-width: 768px) {
+
+  /* ======================
+     HEADER BASE
+  ====================== */
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* ======================
+     LOGO
+  ====================== */
+  .logo {
+    font-size: 22px;
+  }
+
+  /* ======================
+     HIDE DESKTOP NAV
+  ====================== */
+  .desktop-icons {
+    display: none;
+  }
+
+  /* ======================
+     RIGHT ICONS ROW
+  ====================== */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  /* ======================
+     USER (WELCOME + NAME)
+  ====================== */
+  .nav-user {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    max-width: 120px;
+  }
+
+  .nav-user-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .nav-welcome {
+    font-size: 11px;
+    color: #cbd5e1;
+  }
+
+  .nav-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    word-break: break-word;   /* ✅ wrap surname */
+  }
+
+  /* ======================
+     TOGGLE ICON
+  ====================== */
+  .menu-icon {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  /* ======================
+     MOBILE MENU PANEL
+  ====================== */
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    backdrop-filter: blur(8px);
+
+    display: none;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links button {
+    background: none;
+    border: none;
+    color: #1f2937;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* ======================
+     ICONS INSIDE MENU
+  ====================== */
+  .nav-icons {
+    display: flex;
+    gap: 18px;
+    margin-top: 12px;
+  }
+
+  .nav-links svg {
+    stroke: #1f2937 !important;
+  }
+}

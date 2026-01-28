@@ -1,0 +1,17 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* 🚫 body scroll */
+}
+.app-scroll {
+  min-height: calc(100vh - 70px);
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+

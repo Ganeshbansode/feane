@@ -1,0 +1,183 @@
+/* OVERLAY */
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+/* MODAL */
+.login-modal {
+  width: 880px;
+  height: 520px;
+  background: #fff;
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+/* CLOSE */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #444;
+}
+
+/* LEFT IMAGE */
+.auth-image {
+  flex: 0.55;
+  background-image: url("https://themewagon.github.io/feane/images/about-img.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #fafafa;
+}
+
+/* RIGHT FORM */
+.auth-form {
+  flex: 1;
+  padding: 42px 46px;
+}
+
+/* ================= TABS ================= */
+.tabs {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  background: #f2f2f2; /* container bg */
+}
+
+.tabs button {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  background: transparent;
+  color: #222831;
+  transition: all 0.25s ease;
+}
+/* ACTIVE TAB */
+.tabs .active {
+  background: #222831;   /* Dark charcoal */
+  color: #ffffff;
+}
+
+/* INACTIVE TAB */
+.login-tab:not(.active),
+.signup-tab:not(.active) {
+  background: #eeeeee;
+  color: #222831;
+}
+
+/* ================= INPUTS ================= */
+.auth-form input {
+  width: 100%;
+  padding: 13px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.auth-form input:focus {
+  border-color: #00adb5;
+  box-shadow: 0 0 0 2px rgba(0, 173, 181, 0.15);
+}
+
+/* ROW */
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+/* ================= REMEMBER ================= */
+.remember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0 20px;
+  font-size: 15px;
+}
+
+.remember-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.forgot {
+  color: #2874f0;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.terms {
+  display: inline-flex;          /* 🔥 key fix */
+  align-items: center;
+  gap: 8px;
+
+  font-size: 13px;
+  color: #444;
+
+  margin: 12px 0 18px;
+  white-space: nowrap;           /* 🔥 single line force */
+}
+
+.terms span {
+  line-height: 1.2;
+}
+
+.terms input {
+  margin: 0;
+}
+
+
+/* ================= BUTTON ================= */
+.primary-btn {
+  width: 100%;
+  padding: 13px;
+  background: #393e46; 
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+   background: #2f343b;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .login-modal {
+    width: 94%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .auth-image {
+    display: none;
+  }
+
+  .auth-form {
+    padding: 30px 24px;
+  }
+}

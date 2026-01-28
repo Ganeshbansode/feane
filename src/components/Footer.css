@@ -1,0 +1,91 @@
+.footer {
+  background: #1f2430; /* Dark Blue Background */
+  color: white;
+  padding:  0 30px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  width: 30%;
+  min-width: 250px;
+  margin-bottom: 30px;
+}
+
+.footer-column h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-family: "Brush Script MT", cursive;
+}
+
+.footer-column p {
+  margin: 6px 0;
+  opacity: 0.85;
+}
+
+.center .brand {
+  font-size: 32px;
+  font-family: "Brush Script MT", cursive;
+  margin-bottom: 12px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.icon-box {
+  width: 45px;
+  height: 45px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.icon-box img {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-box:hover {
+  background: #f7c02a; 
+}
+
+
+/* Footer Bottom */
+
+.footer-bottom {
+  margin-top: 1px;
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+}

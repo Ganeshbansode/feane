@@ -1,0 +1,241 @@
+/* =========================
+   CHECKOUT PAGE LAYOUT
+========================= */
+.checkout-page {
+  background: #1f2933;
+  padding: 40px 20px 70px;
+  font-family: "Inter", sans-serif;
+}
+
+/* =========================
+   MAIN WRAPPER
+========================= */
+.checkout-wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 36px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+  display: flex;
+  gap: 40px;
+}
+
+/* =========================
+   LEFT & RIGHT SECTIONS
+========================= */
+.checkout-left,
+.checkout-right {
+  flex: 1;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+.checkout-left h3,
+.checkout-right h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #111827;
+}
+
+/* =========================
+   ADDRESS FORM GRID
+========================= */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.form-row input {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #d1d5db;
+  font-size: 14px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  background: #fff;
+}
+
+.form-row input:focus {
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.25);
+  outline: none;
+}
+
+/* Single full-width row */
+.form-row.full {
+  grid-template-columns: 1fr;
+}
+
+/* =========================
+   PINCODE
+========================= */
+.pincode-input {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #d1d5db;
+  font-size: 14px;
+}
+
+.pincode-input:focus {
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.25);
+  outline: none;
+}
+
+/* =========================
+   DEFAULT ADDRESS
+========================= */
+.default-address {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0 10px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.default-address input {
+  accent-color: #fbbf24;
+}
+
+/* =========================
+   SAVE ADDRESS BUTTON
+========================= */
+.save-address-btn {
+  background:  #f59e0b;
+  color: #000000;
+  padding: 11px 22px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.save-address-btn:hover {
+  background: #f59e0b;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   BILL SUMMARY
+========================= */
+.bill-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: 15px;
+  color: #374151;
+}
+
+.bill-row.total {
+  background: #f9fafb;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #111827;
+}
+
+/* =========================
+   PAYMENT SECTION
+========================= */
+.payment-section {
+  margin: 28px 0;
+}
+
+.payment-section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #111827;
+}
+
+.payment-option {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  background: #ffffff;
+}
+
+.payment-option:hover {
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.25);
+}
+
+.payment-option input {
+  margin-top: 3px;
+  accent-color: #fbbf24;
+}
+
+.payment-option strong {
+  font-size: 15px;
+  color: #111827;
+}
+
+.payment-option p {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* =========================
+   PLACE ORDER BUTTON
+========================= */
+.place-order-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #111827;
+  border: none;
+  padding: 17px;
+  border-radius: 35px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.25s ease;
+}
+
+.place-order-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(245, 158, 11, 0.45);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .checkout-wrapper {
+    flex-direction: column;
+    padding: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-wrapper {
+    padding: 22px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .place-order-btn {
+    font-size: 15px;
+    padding: 15px;
+  }
+}
